@@ -54,18 +54,34 @@ class particle
 		const v3& getTotalDistance() const;
 
 
-        SparseMatrix matrixS;
-        std::vector<double> vecS;
-        std::vector<double> Res;
-
-        void multiple(SparseMatrix &matrix,
+        double * vecF;
+        double * vecR;
+        double * matrixF;
+        int size;
+        void multiple2(SparseMatrix &matrix,
                 const std::vector<double> &vec)
         {
-            std::vector<double> *buf = new  std::vector<double>(vec.size(),0);
-            Res.swap(*buf);
 
-            vecS = vec;
-            matrixS = matrix;
+            size = vec.size();
+            vecF = new double[size];
+            vecR = new double[size];
+            matrixF = new double[size*size];
+
+            for (auto i=0;i<size;i++){
+                vecF[i]=vec[i];
+                for (auto j=0;j<size;j++) {
+                    matrixF[i+j] = matrix.get(i,j);
+                }
+            }
+            std::cout << "multiple void" << vecF <<std::endl;
+        };
+
+        std::vector<double> resultVector (){
+            std::vector<double> buf;
+            for (auto i=0;i<size;i++)
+                buf.push_back(vecR[i]);
+
+            return  buf;
         };
 
 };

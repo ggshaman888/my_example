@@ -34,7 +34,7 @@
 # include <cmath>
 # include <chrono>
 # include "sparsematrix.h"
-
+#include <vector>
 const std::size_t Max_Iter = 50;
 
 void print(const std::vector<double> &X);
@@ -62,6 +62,24 @@ void TransformMatrix(SparseMatrix &matrix);
 //		pArray[idx].advance(dt);
 //	}
 //}
+//__global__ void advanceParticles(particle * pArray, int nParticles, int nrows)
+//{
+//    int idx = threadIdx.x + blockIdx.x*blockDim.x; // number thread
+//    if(idx < nParticles)
+//    {
+
+//      //  pArray[idx].advance(dt);
+//        for(int j = 0; j < nrows; j++)
+//        {
+//            double x = pArray->matrixS.get(idx,j);
+//            double y = pArray->vecS[j];
+//            double r = pArray->Res[idx];
+//            double z = x*y;
+//            r = r+z;
+//            pArray->Res[idx] =r;
+//        }
+//    }
+//}
 __global__ void advanceParticles(particle * pArray, int nParticles, int nrows)
 {
     int idx = threadIdx.x + blockIdx.x*blockDim.x; // number thread
@@ -71,12 +89,12 @@ __global__ void advanceParticles(particle * pArray, int nParticles, int nrows)
       //  pArray[idx].advance(dt);
         for(int j = 0; j < nrows; j++)
         {
-            double x = pArray->matrixS.get(idx,j);
-            double y = pArray->vecS[j];
-            double r = pArray->Res[idx];
+            double x = pArray->matrixF[idx*j];
+            double y = pArray->vecF[j];
+            double r = pArray->vecR[idx];
             double z = x*y;
             r = r+z;
-            pArray->Res[idx] =r;
+            pArray->vecR[idx] = r;
         }
     }
 }
@@ -84,22 +102,25 @@ std::vector<double> multiple(
         SparseMatrix &matrix,
         const std::vector<double> &vec)
 {
+    std::cout << "multiple double - 0" << std::endl;
     std::vector<double> Res(0);
     cudaError_t error;
+     std::cout << "multiple double - 1" << std::endl;
   //  int n = 1000000;
     int n = vec.size();
 //    if(argc > 1)	{ n = atoi(argv[1]);}     // Number of particles
 //    if(argc > 2)	{	srand(atoi(argv[2])); } // Random seed
-
+     std::cout << "multiple double - 2" << std::endl;
     error = cudaGetLastError();
+     std::cout << "multiple double - 3" << std::endl;
     if (error != cudaSuccess)
     {
     printf("0 %s\n",cudaGetErrorString(error));
     exit(1);
     }
-
+    std::cout << "multiple void start" << std::endl;
     particle * pArray = new particle[0];
-    pArray->multiple(matrix, vec);
+    pArray->multiple2(matrix, vec);
     particle * devPArray = NULL;
     cudaMalloc(&devPArray, sizeof(pArray));
     cudaDeviceSynchronize(); error = cudaGetLastError();
@@ -116,8 +137,8 @@ std::vector<double> multiple(
     printf("2 %s\n",cudaGetErrorString(error));
     exit(1);
     }
-        int bufN = pArray->vecS.size();
-        int buf_nrows = pArray->matrixS.m_nrows;
+        int bufN = vec.size();
+        int buf_nrows = matrix.m_nrows;
     //for(int i=0; i<100; i++)
     //{
 //        float dt = (float)rand()/(float) RAND_MAX; // Random distance each step
@@ -150,7 +171,7 @@ std::vector<double> multiple(
 //                    n, avgX, avgY, avgZ, avgNorm);
 
 
-    return pArray->Res;
+    return pArray->resultVector();
 }
 int main(int argc, char ** argv)
 {
@@ -206,6 +227,7 @@ std::vector<double> multiple(
 //приведение матрицы к необходимому виду
 void TransformMatrix(SparseMatrix &matrix)
 {
+    std::cout << "TransformMatrix" << std::endl;
     auto n = matrix.m_nrows;
     for(std::size_t i=0; i<n; i++)
     {

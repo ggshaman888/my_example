@@ -19,6 +19,7 @@ struct SparseMatrix
         std::getline(in,line);//считали шапку
         in>>m_nrows;
         m_ncols = m_nrows+1;
+
         std::getline(in,line);//считали значение
         std::getline(in,line);//считали шапку-2
         while(in)
@@ -39,6 +40,7 @@ struct SparseMatrix
             double val;
             in>>i>>val;
             m_matrix[i][m_nrows] = val;
+
         }
         std::cout<<m_matrix.size()<<'\n';
     }

@@ -14,6 +14,8 @@ add_library(particles STATIC
   particle.h
   v3.cu
   v3.h
+  a01.txt
+  b01.txt
   )
 
 # Request that particles be built with -std=c++11
