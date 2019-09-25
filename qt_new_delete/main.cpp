@@ -5,12 +5,12 @@ int main(int argc, char* argv[])
 {
     QCoreApplication a(argc, argv);
 
-    auto my = new MyClass;
+    MyClass* my;
 
     for (int i = 0; i < 3; i++) {
-        delete my;
         my = new MyClass;
         my->runIs();
+        delete my;
     }
     return a.exec();
 }
