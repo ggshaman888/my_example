@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(untitled LANGUAGES CXX)
+project(qt_signals_slots LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -19,6 +19,7 @@ add_executable(untitled
   first.cpp
   middle.cpp
   second.cpp
+  readme.md
 )
 
 target_link_libraries(untitled PRIVATE Qt5::Widgets Qt5::Core)
