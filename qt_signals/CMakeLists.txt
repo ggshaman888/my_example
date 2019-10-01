@@ -20,6 +20,9 @@ add_executable(untitled
   middle.cpp
   second.cpp
   readme.md
+  ux/wait_for_the_end.cpp
+  ux/waitfortheend.ui
+
 )
 
 target_link_libraries(untitled PRIVATE Qt5::Widgets Qt5::Core)
