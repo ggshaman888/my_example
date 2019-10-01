@@ -8,7 +8,7 @@ class APIFromUX {
 public:
     explicit APIFromUX();
     APIFromUX(const APIFromUX&);
-    enum MarkerIs { OTHER, SECOND };
+    enum MarkerIs { OTHER, SECOND, THIS };
 
     MarkerIs mark; ///<< Добавления маркера при передачи.
 

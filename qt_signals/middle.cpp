@@ -5,7 +5,7 @@
 #include "first.h"
 #include "second.h"
 
-#include "ux/05_wait_for_the_end.h"
+#include "ux/wait_for_the_end.h"
 
 Middle::Middle(QObject* parent) : QObject(parent) {}
 
@@ -25,13 +25,22 @@ void Middle::runIs()
 
     auto form = new WaitForTheEnd;
     connect(this, &Middle::info, form, &WaitForTheEnd::slotAPI, Qt::DirectConnection);
-    form->show();
+    //form->show();
     qDebug() << "__middle";
-    int count = 3;
+    int count = 2;
     while (count > 0) {
+        qDebug() << count << "|||> new cicle <|||";
         first_is->runIs();
         count--;
     }
+
+    qDebug() << "__middle_this to this_ executed first...";
+    QThread::sleep(4);
+    connect(this, &Middle::info, this, &Middle::infoSlot, Qt::DirectConnection);
+    auto is  = new APIFromUX;
+    is->mark = APIFromUX::MarkerIs::THIS;
+    emit info(*is);
+    qDebug() << "__middle_this to this_ end work.";
 }
 
 void Middle::infoSlot(APIFromUX is_api)
