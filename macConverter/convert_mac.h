@@ -3,6 +3,7 @@
 
 #include <QObject>
 
+using namespace std;
 class ConvertMAC : public QObject
 {
     Q_OBJECT
@@ -18,7 +19,8 @@ public:
      * @return Increase.
      */
     bool upMac();
-    QString getMAC();
+    QString getMac();
+    std::vector<uchar> getMacVector();
 
 
 
@@ -27,7 +29,7 @@ signals:
 public slots:
 
 private:
-    uchar mac[6] = {0};
+    std::vector<uchar> mac;
     QString mac_str;
     void clrMAC(QString);
     /**
