@@ -9,20 +9,25 @@ class ConvertMAC : public QObject
 public:
     explicit ConvertMAC(QObject *parent = nullptr);
 
-    void setMac();
 
-    void setFromString();
+    void examplePrepareMac();
+
+    void loadMacAddress(QString);
+    /**
+     * @brief upMac Increising mac by 1.
+     * @return Increase.
+     */
+    bool upMac();
     QString getMAC();
 
-    struct Mac {
-        uchar mac_c[6] = {0};
-    } mac;
+
 
 signals:
 
 public slots:
 
 private:
+    uchar mac[6] = {0};
     QString mac_str;
     void clrMAC(QString);
     /**
@@ -31,11 +36,7 @@ private:
      * @return HEX.
      */
     QString charToHEX(uchar);
-    /**
-     * @brief upMac Increising mac by 1.
-     * @return Increase.
-     */
-    bool upMac();
+    void setFromString();
 };
 
 #endif // CONVERTMAC_H

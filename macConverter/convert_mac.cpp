@@ -7,13 +7,16 @@ using namespace std;
 
 ConvertMAC::ConvertMAC(QObject* parent) : QObject(parent) {}
 
-void ConvertMAC::setMac()
+void ConvertMAC::examplePrepareMac()
 {
-    QString mac_1 = "ff:01:45:67:89:ff";
-    clrMAC(mac_1);
-    setFromString();
+    loadMacAddress("ff:01:45:67:89:ff");
     upMac();
     qDebug() << getMAC();
+}
+
+void ConvertMAC::loadMacAddress(QString is_mac)
+{
+    clrMAC(is_mac);
 }
 
 void ConvertMAC::clrMAC(QString is_mac)
@@ -21,6 +24,7 @@ void ConvertMAC::clrMAC(QString is_mac)
     mac_str = is_mac.replace(":", "");
     mac_str = is_mac.replace("-", "");
     mac_str = is_mac.replace(".", "");
+    setFromString();
 }
 
 QString ConvertMAC::charToHEX(uchar dec)
@@ -76,13 +80,13 @@ bool ConvertMAC::upMac()
     bool ok     = false;
     short digit = 5;
     while (digit > -1) {
-        if (mac.mac_c[digit] < 255) {
-            mac.mac_c[digit] = mac.mac_c[digit] + 1;
-            ok               = true;
+        if (mac[digit] < 255) {
+            mac[digit] = mac[digit] + 1;
+            ok         = true;
             break;
         }
         else {
-            mac.mac_c[digit] = 0;
+            mac[digit] = 0;
             digit--;
         }
     }
@@ -103,7 +107,7 @@ void ConvertMAC::setFromString()
         uint x;
         ss << std::hex << buf.toStdString();
         ss >> x;
-        mac.mac_c[j] = static_cast<uchar>(x);
+        mac[j] = static_cast<uchar>(x);
     }
 }
 
@@ -111,7 +115,7 @@ QString ConvertMAC::getMAC()
 {
     QString buf;
     for (int i = 0; i < 6; i++) {
-        buf += charToHEX(mac.mac_c[i]);
+        buf += charToHEX(mac[i]);
         if (i == 5) {
             break;
         }

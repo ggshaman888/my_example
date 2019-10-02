@@ -5,6 +5,6 @@ int main(int argc, char* argv[])
 {
     //    QCoreApplication a(argc, argv);
     auto conv = new ConvertMAC;
-    conv->setMac();
+    conv->examplePrepareMac();
     //    return a.exec();
 }
