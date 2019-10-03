@@ -4,15 +4,15 @@
 #include <QObject>
 
 using namespace std;
-class ConvertMAC : public QObject
-{
+class ConvertMAC : public QObject {
     Q_OBJECT
 public:
-    explicit ConvertMAC(QObject *parent = nullptr);
+    explicit ConvertMAC(QObject* parent = nullptr);
 
 
     void examplePrepareMac();
 
+    void loadMacAddress(std::vector<uchar>);
     void loadMacAddress(QString);
     /**
      * @brief upMac Increising mac by 1.
@@ -20,6 +20,12 @@ public:
      */
     bool upMac();
     QString getMac();
+    /**
+     * @brief getMacToDec Glues the uchar vector by converting to a decimal
+     * number.
+     * @return Decimail number;
+     */
+    int_fast64_t getMacToDec();
     std::vector<uchar> getMacVector();
 
 
@@ -31,7 +37,7 @@ public slots:
 private:
     std::vector<uchar> mac;
     QString mac_str;
-    void clrMAC(QString);
+    void clrMAC(const QString);
     /**
      * @brief charToHEX Convering dec to hex.
      * @see https://stackoverflow.com/a/29759644

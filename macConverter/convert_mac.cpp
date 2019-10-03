@@ -12,7 +12,12 @@ void ConvertMAC::examplePrepareMac()
     loadMacAddress("ff:01:45:67:89:ff");
     upMac();
     mac = getMacVector();
-    qDebug() << getMac();
+    qDebug() << getMac() << "get";
+}
+
+void ConvertMAC::loadMacAddress(std::vector<uchar> is_mac)
+{
+    mac = is_mac;
 }
 
 void ConvertMAC::loadMacAddress(QString is_mac)
@@ -20,11 +25,10 @@ void ConvertMAC::loadMacAddress(QString is_mac)
     clrMAC(is_mac);
 }
 
-void ConvertMAC::clrMAC(QString is_mac)
+void ConvertMAC::clrMAC(const QString is_mac)
 {
-    mac_str = is_mac.replace(":", "");
-    mac_str = is_mac.replace("-", "");
-    mac_str = is_mac.replace(".", "");
+    mac_str = is_mac;
+    mac_str.replace(":", "").replace("-", "").replace(".", "");
     setFromString();
 }
 
@@ -98,6 +102,7 @@ void ConvertMAC::setFromString()
 {
     QString buf;
     int j = 0;
+    mac.clear();
     for (int i = 0; i < 11; i++) {
         buf.clear();
         buf.append(mac_str.at(i)).append(mac_str.at(i + 1));
@@ -123,6 +128,18 @@ QString ConvertMAC::getMac()
         buf += ":";
     }
     return buf;
+}
+
+int_fast64_t ConvertMAC::getMacToDec()
+{
+    int_fast64_t dec_mac = 0;
+    for (int i = 0; i < 6; i++) {
+        dec_mac |= static_cast<int_fast64_t>(mac.at(i));
+        if (i != 5) {
+            dec_mac <<= 8;
+        }
+    }
+    return dec_mac;
 }
 
 std::vector<uchar> ConvertMAC::getMacVector()

@@ -13,5 +13,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5Core)
 
-add_executable(macConverter main.cpp convert_mac.cpp)
+add_executable(macConverter main.cpp convert_mac.cpp prepare_mac.cpp)
 target_link_libraries(macConverter Qt5::Core)
