@@ -12,6 +12,7 @@ public:
     explicit ReadExample(QObject *parent = nullptr);
 
 signals:
+    void is_Stop();
 
 public slots:
     void readLine(QString);

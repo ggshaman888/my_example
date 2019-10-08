@@ -8,8 +8,8 @@ TailMain::TailMain(QObject* parent) : QObject(parent) {}
 
 TailMain::~TailMain()
 {
-    isStop();
     qDebug() << "TailMain::~TailMain()";
+    //isStop();
 }
 
 void TailMain::setListen(QString is_path)
@@ -25,6 +25,8 @@ void TailMain::listenNew()
         QThread::msleep(100);
         readLine();
     }
+    qDebug() << "void TailMain::listenNew()";
+    this->~TailMain();
 }
 
 void TailMain::run()
@@ -34,6 +36,7 @@ void TailMain::run()
 
 void TailMain::isStop()
 {
+    qDebug() << "void TailMain::isStop()";
     reading = false;
 }
 

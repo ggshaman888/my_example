@@ -22,8 +22,11 @@ ReadExample::ReadExample(QObject* parent) : QObject(parent)
     connect(tail, &TailMain::newString, this, &ReadExample::readLine, Qt::DirectConnection);
     connect(th, &QThread::started, tail, &TailMain::run, Qt::DirectConnection);
     connect(th, &QThread::finished, tail, &TailMain::deleteLater, Qt::QueuedConnection);
+    connect(this, &ReadExample::is_Stop, tail, &TailMain::isStop, Qt::DirectConnection);
 
     th->start();
+
+    //emit is_Stop(); ///< For example.
 }
 
 void ReadExample::readLine(QString str)
