@@ -33,10 +33,11 @@
 #define MAX_ELEMENTS 29
 
 #include <QList>
-class SetUART
+class ExampleUART
 {
 public:
-    SetUART();
+    ExampleUART();
+    void isRun();
     QList <int> listTiming();
 };
 

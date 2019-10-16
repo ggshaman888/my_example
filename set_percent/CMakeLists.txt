@@ -13,5 +13,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5Core)
 
-add_executable(set_percent main.cpp)
-target_link_libraries(set_percent Qt5::Core)
+add_executable(${PROJECT_NAME}
+    "main.cpp"
+    "calculate_for_list.cpp"
+    "example/example_uart.cpp"
+    "README.md"
+    )
+target_link_libraries(${PROJECT_NAME} Qt5::Core)
