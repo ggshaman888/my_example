@@ -1,6 +1,6 @@
 #include <QCoreApplication>
 #include <QDebug>
-
+#include <map>
 using namespace std;
 
 class A {
@@ -14,12 +14,19 @@ public:
 
 class Abstraciya : public map<int, A*> {
 public:
-	Abstraciya(const map<int, B*>& b) { qDebug() << b.at(0)->_b; }
+	Abstraciya(const map<int, B*>& b)
+	{
+		if (b.size() > 0) {
+			qDebug() << b.at(0)->_b;
+		}
+	}
 };
 
 void func(const map<int, A*> is_a)
 {
-	qDebug() << is_a.at(0)->_a;
+	if (is_a.size() > 0) {
+		qDebug() << is_a.at(0)->_a;
+	}
 }
 int main(int argc, char* argv[])
 {
@@ -27,7 +34,6 @@ int main(int argc, char* argv[])
 	B _is_b;
 	map<int, B*> _b1;
 	_b1[0] = &_is_b;
-	Abstraciya(_b1);
 	func(Abstraciya(_b1));
 	return a.exec();
 }
