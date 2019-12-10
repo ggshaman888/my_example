@@ -1,4 +1,0 @@
-C:/Qt/my_examples/my_example/build-terminal-Desktop_Qt_5_13_0_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/terminal.dir
-C:/Qt/my_examples/my_example/build-terminal-Desktop_Qt_5_13_0_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/edit_cache.dir
-C:/Qt/my_examples/my_example/build-terminal-Desktop_Qt_5_13_0_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/rebuild_cache.dir
-C:/Qt/my_examples/my_example/build-terminal-Desktop_Qt_5_13_0_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/terminal_autogen.dir

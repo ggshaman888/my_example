@@ -1,4 +1,0 @@
-C:/Qt/my_examples/my_example/build-set_baikal-Desktop_Qt_5_12_4_MinGW_32_bit-u0412u044bu043fu0443u0441u043a/CMakeFiles/set_baikal.dir
-C:/Qt/my_examples/my_example/build-set_baikal-Desktop_Qt_5_12_4_MinGW_32_bit-u0412u044bu043fu0443u0441u043a/CMakeFiles/edit_cache.dir
-C:/Qt/my_examples/my_example/build-set_baikal-Desktop_Qt_5_12_4_MinGW_32_bit-u0412u044bu043fu0443u0441u043a/CMakeFiles/rebuild_cache.dir
-C:/Qt/my_examples/my_example/build-set_baikal-Desktop_Qt_5_12_4_MinGW_32_bit-u0412u044bu043fu0443u0441u043a/CMakeFiles/set_baikal_autogen.dir

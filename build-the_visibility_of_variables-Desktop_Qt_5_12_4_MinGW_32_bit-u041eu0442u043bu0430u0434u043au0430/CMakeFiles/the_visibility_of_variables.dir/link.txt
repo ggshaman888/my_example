@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\the_visibility_of_variables.dir/objects.a
-C:\Qt\Tools\mingw730_32\bin\ar.exe cr CMakeFiles\the_visibility_of_variables.dir/objects.a @CMakeFiles\the_visibility_of_variables.dir\objects1.rsp
-C:\Qt\Tools\mingw730_32\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\the_visibility_of_variables.dir/objects.a -Wl,--no-whole-archive  -o the_visibility_of_variables.exe -Wl,--out-implib,libthe_visibility_of_variables.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\the_visibility_of_variables.dir\linklibs.rsp
