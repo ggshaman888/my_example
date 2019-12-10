@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+5c370d741008acea039ce8ab3ebb3a12 CMakeFiles/StaticMethods_autogen

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="the_visibility_of_variables"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\5.12.4\;CMake Files\..\..\..\5.12.4\mingw73_32\;CMake Files\..\..\..\5.12.4\mingw73_32\lib\;CMake Files\..\..\..\5.12.4\mingw73_32\lib\cmake\;CMake Files\..\..\..\5.12.4\mingw73_32\lib\cmake\Qt5Core\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="the_visibility_of_variables">
+				<Option output="C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/the_visibility_of_variables.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430"/>
+					<Add directory="C:/Qt/my_examples/my_example/the_visibility_of_variables"/>
+					<Add directory="C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/the_visibility_of_variables_autogen/include"/>
+					<Add directory="C:/Qt/5.12.4/mingw73_32/include"/>
+					<Add directory="C:/Qt/5.12.4/mingw73_32/include/QtCore"/>
+					<Add directory="C:/Qt/5.12.4/mingw73_32/./mkspecs/win32-g++"/>
+					<Add directory="C:/Qt/Tools/mingw730_32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++"/>
+					<Add directory="C:/Qt/Tools/mingw730_32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/Qt/Tools/mingw730_32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward"/>
+					<Add directory="C:/Qt/Tools/mingw730_32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include"/>
+					<Add directory="C:/Qt/Tools/mingw730_32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include-fixed"/>
+					<Add directory="C:/Qt/Tools/mingw730_32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 the_visibility_of_variables"/>
+					<CompileFile command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="the_visibility_of_variables/fast">
+				<Option output="C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/the_visibility_of_variables.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430"/>
+					<Add directory="C:/Qt/my_examples/my_example/the_visibility_of_variables"/>
+					<Add directory="C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/the_visibility_of_variables_autogen/include"/>
+					<Add directory="C:/Qt/5.12.4/mingw73_32/include"/>
+					<Add directory="C:/Qt/5.12.4/mingw73_32/include/QtCore"/>
+					<Add directory="C:/Qt/5.12.4/mingw73_32/./mkspecs/win32-g++"/>
+					<Add directory="C:/Qt/Tools/mingw730_32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++"/>
+					<Add directory="C:/Qt/Tools/mingw730_32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/Qt/Tools/mingw730_32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward"/>
+					<Add directory="C:/Qt/Tools/mingw730_32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include"/>
+					<Add directory="C:/Qt/Tools/mingw730_32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include-fixed"/>
+					<Add directory="C:/Qt/Tools/mingw730_32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 the_visibility_of_variables/fast"/>
+					<CompileFile command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="the_visibility_of_variables_autogen">
+				<Option working_dir="C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 the_visibility_of_variables_autogen"/>
+					<CompileFile command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Qt/Tools/mingw730_32/bin/mingw32-make.exe -f &quot;C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Qt/my_examples/my_example/build-the_visibility_of_variables-Desktop_Qt_5_12_4_MinGW_32_bit-u041eu0442u043bu0430u0434u043au0430/the_visibility_of_variables_autogen/mocs_compilation.cpp">
+			<Option target="the_visibility_of_variables"/>
+		</Unit>
+		<Unit filename="C:/Qt/my_examples/my_example/the_visibility_of_variables/main.cpp">
+			<Option target="the_visibility_of_variables"/>
+		</Unit>
+		<Unit filename="C:/Qt/my_examples/my_example/the_visibility_of_variables/myclass1.cpp">
+			<Option target="the_visibility_of_variables"/>
+		</Unit>
+		<Unit filename="C:/Qt/my_examples/my_example/the_visibility_of_variables/myclass1.h">
+			<Option target="the_visibility_of_variables"/>
+		</Unit>
+		<Unit filename="C:/Qt/my_examples/my_example/the_visibility_of_variables/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Qt/my_examples/my_example/the_visibility_of_variables/../../../5.12.4/mingw73_32/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\5.12.4\mingw73_32\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="C:/Qt/my_examples/my_example/the_visibility_of_variables/../../../5.12.4/mingw73_32/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\5.12.4\mingw73_32\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="C:/Qt/my_examples/my_example/the_visibility_of_variables/../../../5.12.4/mingw73_32/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\5.12.4\mingw73_32\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="C:/Qt/my_examples/my_example/the_visibility_of_variables/../../../5.12.4/mingw73_32/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\5.12.4\mingw73_32\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="C:/Qt/my_examples/my_example/the_visibility_of_variables/../../../5.12.4/mingw73_32/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\5.12.4\mingw73_32\lib\cmake\Qt5Core\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

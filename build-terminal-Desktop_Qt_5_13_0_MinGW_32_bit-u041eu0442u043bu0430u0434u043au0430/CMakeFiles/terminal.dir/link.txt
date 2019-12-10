@@ -1,0 +1,2 @@
+C:\Qt\Tools\mingw730_32\bin\ar.exe qc libterminal.a  CMakeFiles/terminal.dir/terminal_autogen/mocs_compilation.cpp.obj CMakeFiles/terminal.dir/consoleform.cpp.obj CMakeFiles/terminal.dir/runprepare.cpp.obj CMakeFiles/terminal.dir/setbaikal.cpp.obj CMakeFiles/terminal.dir/settings/percentwaitfortheend2.cpp.obj CMakeFiles/terminal.dir/settings/threadwaitcom.cpp.obj CMakeFiles/terminal.dir/prepare_input_console/piconsole.cpp.obj
+C:\Qt\Tools\mingw730_32\bin\ranlib.exe libterminal.a
