@@ -1,4 +1,5 @@
-project(QSerialTest)
+
+project(terminal)
 
 cmake_minimum_required(VERSION 3.10.0)
 if(CMAKE_VERSION VERSION_LESS "3.15.0")
@@ -12,16 +13,11 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-find_package(Qt5 COMPONENTS Widgets Core Sql Gui REQUIRED)
-include_directories(terminal)
+find_package(Qt5 COMPONENTS Widgets Core Sql Gui SerialPort REQUIRED)
 
-
-add_executable(${PROJECT_NAME}
-    main.cpp
-)
-
-add_subdirectory(terminal)
-
+add_library(${PROJECT_NAME}
+    "consoleform.cpp"
+    )
 
 target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::Core Qt5::Sql Qt5::Gui
-     terminal )
+    Qt5::SerialPort)

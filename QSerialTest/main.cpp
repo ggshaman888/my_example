@@ -1,8 +1,12 @@
-#include <QCoreApplication>
+#include <QtWidgets/QApplication>
+#include "consoleform.h"
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
-	QCoreApplication a(argc, argv);
+	QApplication a(argc, argv);
+
+	ConsoleForm is_f;
+	is_f.isRun();
 
 	return a.exec();
 }

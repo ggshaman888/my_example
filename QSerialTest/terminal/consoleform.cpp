@@ -8,7 +8,7 @@ ConsoleForm::ConsoleForm(QObject* parent) : QObject(parent)
 
 void ConsoleForm::isRun()
 {
-	testCOM("COM4");
+	testCOM("COM3");
 }
 
 void ConsoleForm::testCOM(QString is_com)
